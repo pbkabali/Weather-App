@@ -1,2 +1,8 @@
+import "./styles.css";
+import getWeather from "./apiCalls";
+
 const container = document.getElementById("container");
-container.innerText = "Your Weather";
+
+getWeather("London,uk", (data) => {
+  container.innerText = data.main.temp;
+});
