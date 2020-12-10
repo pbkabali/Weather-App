@@ -27,4 +27,17 @@ export const getWeatherByCoord = (lat, lon, units, action) => {
     });
 };
 
+export const getWeatherByCityId = (city_id, units, action) => {
+  fetch(`${BASE_URL}id=${city_id}&appid=${APP_ID}&units=${units}`, {
+    mode: "cors",
+  })
+    .then((res) => res.json())
+    .then((data) => {
+      action(data);
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+};
+
 export default getWeatherByCityName;

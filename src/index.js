@@ -1,5 +1,8 @@
 import "./styles.css";
-import getWeatherByCityName, { getWeatherByCoord } from "./apiCalls";
+import getWeatherByCityName, {
+  getWeatherByCoord,
+  getWeatherByCityId,
+} from "./apiCalls";
 
 const container = document.getElementById("container");
 
@@ -8,6 +11,12 @@ getWeatherByCityName("kampala", "metric", (data) => {
 });
 
 getWeatherByCoord(0.3476, 32.5825, "metric", (data) => {
+  const weather = document.createElement("h3");
+  weather.innerText = data.main.temp;
+  container.appendChild(weather);
+});
+
+getWeatherByCityId(443339, "metric", (data) => {
   const weather = document.createElement("h3");
   weather.innerText = data.main.temp;
   container.appendChild(weather);
