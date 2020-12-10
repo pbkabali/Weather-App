@@ -1,8 +1,14 @@
 import "./styles.css";
-import getWeather from "./apiCalls";
+import getWeatherByCityName, { getWeatherByCoord } from "./apiCalls";
 
 const container = document.getElementById("container");
 
-getWeather("London,uk", (data) => {
+getWeatherByCityName("kampala", "metric", (data) => {
   container.innerText = data.main.temp;
+});
+
+getWeatherByCoord(0.3476, 32.5825, "metric", (data) => {
+  const weather = document.createElement("h3");
+  weather.innerText = data.main.temp;
+  container.appendChild(weather);
 });
