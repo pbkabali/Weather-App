@@ -3,6 +3,8 @@ import formByName, {
   nameFormSwitchLabel,
   switchForm,
 } from "./requestForms";
+import loading from "./loading";
+
 export const container = document.getElementById("container");
 
 const pageLoad = () => {
@@ -21,7 +23,7 @@ const pageLoad = () => {
   formDiv.id = "form-div";
   formDiv.appendChild(formByName());
   actionsDiv.append(formHeading, switchFormButton);
-  container.append(dataDiv, actionsDiv, formDiv);
+  container.append(loading(), dataDiv, actionsDiv, formDiv);
 };
 
 export default pageLoad;

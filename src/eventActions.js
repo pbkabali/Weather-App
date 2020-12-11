@@ -1,8 +1,14 @@
 import getWeatherByCityName, { getWeatherByCoord } from "./apiCalls";
 import extractWeatherData from "./processData";
 
+const toggleLoading = () => {
+  const loading = document.getElementById("loading-component");
+  loading.classList.toggle("display-none");
+};
+
 const requestData = (method) => {
   const dataDiv = document.getElementById("data-div");
+  toggleLoading();
   let getWeather;
   if (method === "name") {
     const cityName = document.getElementById("name").value;
@@ -31,6 +37,7 @@ const requestData = (method) => {
       <p><span class = "property">Humidity: </span>${humidity}</p>
       <p><span class = "property">Wind speed: </span>${windSpeed}</p>
     `;
+    toggleLoading();
   });
 };
 
