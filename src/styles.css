@@ -55,8 +55,11 @@ button {
   color: gold;
 }
 
+#data-div {
+  width: 100%;
+}
+
 .data-section {
-  background-color: aqua;
   flex-direction: column;
   border-radius: 5px;
   min-width: 80%;
@@ -80,6 +83,27 @@ button {
 
 .bottom-margin {
   margin-bottom: 1vh;
+}
+
+.clear-weather {
+  background-color: rgb(248, 252, 252);
+}
+
+.cloudy-weather {
+  background-color: rgb(143, 161, 161);
+}
+
+.rainy-weather {
+  background-color: rgb(62, 65, 65);
+  color: antiquewhite;
+}
+
+.sunny-weather {
+  background-color: rgb(247, 230, 136);
+}
+
+.calm-weather {
+  background-color: aqua;
 }
 
 .notice-modal {

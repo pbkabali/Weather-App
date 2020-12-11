@@ -28,7 +28,7 @@ const pageLoad = () => {
   const dataContainer = document.createElement("div");
   dataContainer.classList.add("flex");
   const dataDiv = document.createElement("div");
-  dataDiv.classList.add("flex", "data-section");
+  dataDiv.classList.add("flex");
   dataDiv.id = "data-div";
   dataContainer.appendChild(dataDiv);
   container.append(notice(), loading(), formHeading, actionsDiv, dataContainer);

@@ -1,5 +1,6 @@
 const extractWeatherData = (data) => {
   return {
+    main: data.weather[0].main,
     condition: data.weather[0].description,
     temperature: data.main.temp,
     pressure: data.main.pressure,

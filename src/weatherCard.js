@@ -23,6 +23,7 @@ window.changeScale = () => {
 
 const weatherCard = (props) => {
   const {
+    main,
     name,
     country,
     condition,
@@ -32,20 +33,42 @@ const weatherCard = (props) => {
     windSpeed,
   } = props;
   celciusTemp = temperature;
-  return `<h1 class="text-margin">Weather information for ${name}, ${country}</h1>
-  <div class="text-margin">
-    <p class="bottom-margin"><span class = "property">Name: </span>${name}</p>
-    <p class="bottom-margin"><span class = "property">Country code: </span>${country}</p>
-    <p class="bottom-margin"><span class = "property">General weather condition: </span>${condition}</p>
-    <p class="bottom-margin">
-      <span class = "property">Temperature: </span>
-      <span id = "temperature">${temperature}</span>
-      <span id = "temp-units">${celciusUnits}</span>
-      <span id = "temp-switch" class = "temp-switch" onclick="changeScale()" >${celciusSwitchLabel}</span>
-    </p>
-    <p class="bottom-margin"><span class = "property">Pressure: </span>${pressure} Pa</p>
-    <p class="bottom-margin"><span class = "property">Humidity: </span>${humidity} %</p>
-    <p class="bottom-margin"><span class = "property">Wind speed: </span>${windSpeed} km/hr</p>
+
+  let weatherColor;
+
+  switch (main.toLowerCase()) {
+    case "clear":
+      weatherColor = "clear-weather";
+      break;
+    case "clouds":
+      weatherColor = "cloudy-weather";
+      break;
+    case "rain":
+      weatherColor = "rainy-weather";
+      break;
+    case "sun":
+      weatherColor = "sunny-weather";
+      break;
+    default:
+      weatherColor = "calm-weather";
+  }
+
+  return `<div class="${weatherColor} flex data-section">
+    <h1 class="text-margin">Weather information for ${name}, ${country}</h1>
+    <div class="text-margin">
+      <p class="bottom-margin"><span class = "property">Name: </span>${name}</p>
+      <p class="bottom-margin"><span class = "property">Country code: </span>${country}</p>
+      <p class="bottom-margin"><span class = "property">General weather condition: </span>${condition}</p>
+      <p class="bottom-margin">
+        <span class = "property">Temperature: </span>
+        <span id = "temperature">${temperature}</span>
+        <span id = "temp-units">${celciusUnits}</span>
+        <span id = "temp-switch" class = "temp-switch" onclick="changeScale()" >${celciusSwitchLabel}</span>
+      </p>
+      <p class="bottom-margin"><span class = "property">Pressure: </span>${pressure} Pa</p>
+      <p class="bottom-margin"><span class = "property">Humidity: </span>${humidity} %</p>
+      <p class="bottom-margin"><span class = "property">Wind speed: </span>${windSpeed} km/hr</p>
+    </div>
   </div>
 `;
 };

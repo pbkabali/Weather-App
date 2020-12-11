@@ -31,6 +31,7 @@ const requestData = (method) => {
     })
     .catch((err) => {
       openNotice(`Oops! ${err}`);
+      toggleLoading();
     });
 };
 
