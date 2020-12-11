@@ -1,5 +1,8 @@
-import requestData from "./eventActions";
-
+import formByName, {
+  nameFormHeading,
+  nameFormSwitchLabel,
+  switchForm,
+} from "./requestForms";
 export const container = document.getElementById("container");
 
 const pageLoad = () => {
@@ -7,14 +10,18 @@ const pageLoad = () => {
   dataDiv.id = "data-div";
   const actionsDiv = document.createElement("div");
   actionsDiv.id = "actions-div";
-  const locationName = document.createElement("input");
-  locationName.placeholder = "Enter a city name";
-  locationName.id = "name";
-  const requestBtn = document.createElement("button");
-  requestBtn.innerText = "Request Weather data";
-  requestBtn.onclick = requestData;
-  actionsDiv.append(locationName, requestBtn);
-  container.append(dataDiv, actionsDiv);
+  const formHeading = document.createElement("h2");
+  formHeading.id = "form-heading";
+  formHeading.innerText = nameFormHeading;
+  const switchFormButton = document.createElement("button");
+  switchFormButton.id = "switch-form";
+  switchFormButton.innerText = nameFormSwitchLabel;
+  switchFormButton.onclick = switchForm;
+  const formDiv = document.createElement("div");
+  formDiv.id = "form-div";
+  formDiv.appendChild(formByName());
+  actionsDiv.append(formHeading, switchFormButton);
+  container.append(dataDiv, actionsDiv, formDiv);
 };
 
 export default pageLoad;
