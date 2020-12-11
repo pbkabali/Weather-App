@@ -10,7 +10,7 @@ const pageLoad = () => {
   dataDiv.id = "data-div";
   const actionsDiv = document.createElement("div");
   actionsDiv.id = "actions-div";
-  const formHeading = document.createElement("h2");
+  const formHeading = document.createElement("h3");
   formHeading.id = "form-heading";
   formHeading.innerText = nameFormHeading;
   const switchFormButton = document.createElement("button");
