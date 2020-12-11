@@ -67,18 +67,49 @@ button {
 }
 
 .temp-switch {
-  border: 1px solid red;
+  border-bottom: 1px solid gold;
   border-radius: 3px;
-  padding: 2px;
   margin-left: 40px;
+  color: rgb(165, 90, 235);
 }
 
 .temp-switch:hover {
-  border-width: 2px;
   cursor: pointer;
-  color: blue;
+  color: rgb(204, 97, 48);
 }
 
 .bottom-margin {
   margin-bottom: 1vh;
+}
+
+.notice-modal {
+  z-index: 10;
+}
+
+.notice {
+  width: 40%;
+  position: fixed;
+  z-index: 10;
+  padding: 20px;
+  left: 30%;
+  top: 5vh;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.5);
+  text-align: center;
+  border-radius: 5px;
+  color: gainsboro;
+  font-size: large;
+}
+
+.close-btn {
+  display: inline-block;
+  padding: 0 5px 0 5px;
+  border: 1px gold solid;
+  border-radius: 2px;
+  margin: 5px;
+}
+
+.close-btn:hover {
+  color: #fff;
+  cursor: pointer;
 }

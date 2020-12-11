@@ -4,6 +4,7 @@ import formByName, {
   switchForm,
 } from "./requestForms";
 import loading from "./loading";
+import notice from "./notice";
 
 export const container = document.getElementById("container");
 
@@ -30,7 +31,7 @@ const pageLoad = () => {
   dataDiv.classList.add("flex", "data-section");
   dataDiv.id = "data-div";
   dataContainer.appendChild(dataDiv);
-  container.append(loading(), formHeading, actionsDiv, dataContainer);
+  container.append(notice(), loading(), formHeading, actionsDiv, dataContainer);
 };
 
 export default pageLoad;

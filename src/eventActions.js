@@ -1,6 +1,7 @@
 import getWeatherByCityName, { getWeatherByCoord } from "./apiCalls";
 import extractWeatherData from "./processData";
 import weatherCard from "./weatherCard";
+import { openNotice } from "./notice";
 
 const toggleLoading = () => {
   const loading = document.getElementById("loading-component");
@@ -19,10 +20,18 @@ const requestData = (method) => {
     const lon = document.getElementById("longitude").value;
     getWeather = getWeatherByCoord(lat, lon, "metric");
   }
-  getWeather.then((response) => {
-    dataDiv.innerHTML = weatherCard(extractWeatherData(response));
-    toggleLoading();
-  });
+  getWeather
+    .then((response) => {
+      if (response.cod === 200) {
+        dataDiv.innerHTML = weatherCard(extractWeatherData(response));
+      } else {
+        openNotice(`Oops! ${response.message}`);
+      }
+      toggleLoading();
+    })
+    .catch((err) => {
+      openNotice(`Oops! ${err}`);
+    });
 };
 
 export default requestData;
