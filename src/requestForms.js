@@ -23,10 +23,10 @@ const formByCoord = () => {
   const form = document.createElement("div");
   form.id = "coord-form";
   const lat = document.createElement("input");
-  lat.placeholder = "Enter Latitude";
+  lat.placeholder = "Enter Latitude (deg)";
   lat.id = "latitude";
   const lon = document.createElement("input");
-  lon.placeholder = "Enter Longitude";
+  lon.placeholder = "Enter Longitude (deg)";
   lon.id = "longitude";
   const requestBtn = document.createElement("button");
   requestBtn.innerText = "Request Weather data";

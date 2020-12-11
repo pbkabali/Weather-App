@@ -6,6 +6,10 @@
   box-sizing: border-box;
 }
 
+body {
+  background-color: rgb(165, 90, 235);
+}
+
 input {
   margin: 20px;
   padding: 10px;
@@ -47,15 +51,34 @@ button {
 
 .form-heading {
   text-align: center;
-  margin-top: 10vh;
+  padding-top: 10vh;
+  color: gold;
 }
 
 .data-section {
   background-color: aqua;
   flex-direction: column;
   border-radius: 5px;
+  min-width: 80%;
 }
 
 .actions-section {
   margin: 5vh 0 5vh 0;
+}
+
+.temp-switch {
+  border: 1px solid red;
+  border-radius: 3px;
+  padding: 2px;
+  margin-left: 40px;
+}
+
+.temp-switch:hover {
+  border-width: 2px;
+  cursor: pointer;
+  color: blue;
+}
+
+.bottom-margin {
+  margin-bottom: 1vh;
 }
