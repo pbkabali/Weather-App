@@ -43,7 +43,7 @@ Run `npm run watch` to run webpack build in watch mode.
 
 ### Usage
 
-Open `./dist/index.html` in your browser
+Open `./dist/index.html` in your browser or run `npm run start` to launch the web-server
 
 ## Author
 

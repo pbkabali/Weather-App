@@ -8,7 +8,7 @@
     "watch": "webpack --watch",
     "dev": "webpack --mode development",
     "build": "webpack --mode production",
-    "start": "webpack-dev-server --mode development --open"
+    "start": "npx http-server"
   },
   "repository": {
     "type": "git",
@@ -28,6 +28,7 @@
     "eslint-config-airbnb-base": "^14.1.0",
     "eslint-plugin-import": "^2.20.2",
     "file-loader": "^6.2.0",
+    "http-server": "^0.12.3",
     "image-webpack-loader": "^7.0.1",
     "remove-files-webpack-plugin": "^1.4.4",
     "style-loader": "^2.0.0",
