@@ -6,8 +6,32 @@
   box-sizing: border-box;
 }
 
+input {
+  margin: 20px;
+  padding: 10px;
+}
+
+button {
+  padding: 10px;
+  margin: 20px;
+}
+
 .property {
   font-weight: bold;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.text-margin {
+  margin: 1vw 3vw 3vw 3vw;
+}
+
+.display-none {
+  display: none;
 }
 
 .loading {
@@ -18,12 +42,20 @@
   background-color: rgb(95, 93, 93);
   background-color: rgba(95, 93, 93, 0.4);
   color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   font-size: xx-large;
 }
 
-.display-none {
-  display: none;
+.form-heading {
+  text-align: center;
+  margin-top: 10vh;
+}
+
+.data-section {
+  background-color: aqua;
+  flex-direction: column;
+  border-radius: 5px;
+}
+
+.actions-section {
+  margin: 5vh 0 5vh 0;
 }

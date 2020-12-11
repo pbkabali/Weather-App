@@ -2,7 +2,7 @@ const loading = () => {
   const element = document.createElement("div");
   element.id = "loading-component";
   element.innerText = "Loading ...";
-  element.classList.add("loading", "display-none");
+  element.classList.add("loading", "flex", "display-none");
   return element;
 };
 
