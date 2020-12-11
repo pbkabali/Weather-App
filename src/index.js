@@ -1,4 +1,4 @@
-import "./styles.css";
-import pageLoad from "./pageLoad";
+import './styles.css';
+import pageLoad from './pageLoad';
 
 pageLoad();
