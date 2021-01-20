@@ -137,3 +137,21 @@ button {
   color: #fff;
   cursor: pointer;
 }
+
+.weather-details {
+  font-size: large;
+}
+
+.btn-1 {
+  color: #fff;
+  border-radius: 5px;
+  outline: none;
+}
+
+.switch-form-button {
+  background-color: blueviolet;
+}
+
+.request-btn {
+  background-color: brown;
+}

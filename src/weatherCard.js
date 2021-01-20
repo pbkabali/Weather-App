@@ -55,7 +55,7 @@ const weatherCard = (props) => {
 
   return `<div class="${weatherColor} flex data-section">
     <h1 class="text-margin">Weather information for ${name}, ${country}</h1>
-    <div class="text-margin">
+    <div class="text-margin weather-details">
       <p class="bottom-margin"><span class = "property">Name: </span>${name}</p>
       <p class="bottom-margin"><span class = "property">Country code: </span>${country}</p>
       <p class="bottom-margin"><span class = "property">General weather condition: </span>${condition}</p>
