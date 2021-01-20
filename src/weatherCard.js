@@ -1,14 +1,14 @@
-const celciusSwitchLabel = 'Show temperature on Fahrenheit scale';
-const fahrenheitSwitchLabel = 'Show temperature on Celcius scale';
-const celciusUnits = '\u2103';
-const fahrenheitUnits = '\u2109;';
+const celciusSwitchLabel = "Fahrenheit scale";
+const fahrenheitSwitchLabel = "Celcius scale";
+const celciusUnits = "\u2103";
+const fahrenheitUnits = "\u2109;";
 
-let celciusTemp = '';
+let celciusTemp = "";
 
 window.changeScale = () => {
-  const temperature = document.getElementById('temperature');
-  const tempSwitch = document.getElementById('temp-switch');
-  const tempUnits = document.getElementById('temp-units');
+  const temperature = document.getElementById("temperature");
+  const tempSwitch = document.getElementById("temp-switch");
+  const tempUnits = document.getElementById("temp-units");
   if (parseFloat(celciusTemp) === parseFloat(temperature.innerText)) {
     const fahrenheit = (celciusTemp * 9) / 5 + 32;
     temperature.innerText = fahrenheit.toFixed(2);
@@ -37,20 +37,20 @@ const weatherCard = (props) => {
   let weatherColor;
 
   switch (main.toLowerCase()) {
-    case 'clear':
-      weatherColor = 'clear-weather';
+    case "clear":
+      weatherColor = "clear-weather";
       break;
-    case 'clouds':
-      weatherColor = 'cloudy-weather';
+    case "clouds":
+      weatherColor = "cloudy-weather";
       break;
-    case 'rain':
-      weatherColor = 'rainy-weather';
+    case "rain":
+      weatherColor = "rainy-weather";
       break;
-    case 'sun':
-      weatherColor = 'sunny-weather';
+    case "sun":
+      weatherColor = "sunny-weather";
       break;
     default:
-      weatherColor = 'calm-weather';
+      weatherColor = "calm-weather";
   }
 
   return `<div class="${weatherColor} flex data-section">
